@@ -11,11 +11,11 @@ def checkinput():
         try:
             val = int(input())
         except ValueError:
-            print('Pls Enter a number!')
+            print('Pls Enter a number!\n')
             continue
         else:
             if val > 2 or val < 1:
-                print('Enter a Number 1 or 2 !')
+                print('Enter a Number 1 or 2 !\n')
             else:
                 return val
 
@@ -35,7 +35,7 @@ def checkLoginUser(username, password):
             userExist = True
     
     if userExist == False:
-        print('Invalid username or password!')       
+        print('Invalid username or password!\n')       
     
     file.close()
     return userExist
@@ -58,7 +58,7 @@ def checkRegUsername(username):
     for line in file:
         data = line.split(':')
         if data[0] == username:
-            print('Username is already taken!')
+            print('Username is already taken!\n')
             file.close()
             return True
         
@@ -69,7 +69,7 @@ def checkRegUsername(username):
 def registerPanel():
     while True:
         
-        print('Register Panel')
+        print('Register Panel\n')
         regUser = input('New Username: ')
         regPass = input('New Password: ')
         
@@ -81,7 +81,7 @@ def registerPanel():
             file.write(data + '\n')
             file.close()
             
-            print('You can Loging in!')
+            print('You can Loging in!\n')
             
             break
         
