@@ -95,13 +95,13 @@ while True:
     print('2. Register\n')
 
     # Check input value
-    l = checkinput()
+    userInput = checkinput()
 
     # Login user
-    if l == 1:
+    if userInput == 1:
         loginPanel()
         break
 
     # Register user
-    if l == 2:
+    if userInput == 2:
         registerPanel()
